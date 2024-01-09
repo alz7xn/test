@@ -10,6 +10,13 @@ jobs:
       - checkout
 
       - run:
+          name: Configure Git with Secondary Account
+          command: |
+            git config user.email "alexis@neuronaagency.com"
+            git config user.name "Alexis Aldana"
+
+
+      - run:
           name: Build HTML
           command: echo "Build HTML step goes here"
 
