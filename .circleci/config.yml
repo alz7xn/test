@@ -7,15 +7,14 @@ jobs:
       #- image: circleci/node:14
 
     steps:
+      - checkout
 
       - run:
-          name: Set Git Credentials
+          name: Configure Git with Secondary Account
           command: |
             git config user.email "alexis@neuronaagency.com"
             git config user.name "Alexis Aldana"
-            git clone git@github-second:alz7xn/test.git
 
-      #- checkout
 
       - run:
           name: Build HTML
